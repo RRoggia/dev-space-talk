@@ -9,6 +9,9 @@ public class BigIntegerExample {
 		BigInteger integer = new BigInteger(10, 10, new Random());
 		System.out.println(integer);
 
+		BigInteger probablePrime = BigInteger.probablePrime(10, new Random());
+		System.out.println(probablePrime);
+
 	}
 
 }
