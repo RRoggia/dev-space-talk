@@ -1,17 +1,25 @@
 package com.sap.effective.objectsmanagement;
 
 public class OtherBook {
-
 	private String name;
 	private int pages;
+	private int numberOfPositions;
 
-	private OtherBook(String name, int pages) {
-		this.name = name;
-		this.pages = pages;
+	private OtherBook() {
 	}
 
-	public static OtherBook create(String name, int pages) {
-		return new OtherBook(name, pages);
+	public static OtherBook createBook(String name, int pages) {
+		OtherBook otherBook = new OtherBook();
+		otherBook.setName(name);
+		otherBook.setPages(pages);
+		return otherBook;
+	}
+
+	public static OtherBook createDigitalBook(String name, int numberOfPositions) {
+		OtherBook otherBook = new OtherBook();
+		otherBook.setName(name);
+		otherBook.setNumberOfPositions(numberOfPositions);
+		return otherBook;
 	}
 
 	public String getName() {
@@ -30,9 +38,17 @@ public class OtherBook {
 		this.pages = pages;
 	}
 
+	public int getNumberOfPositions() {
+		return numberOfPositions;
+	}
+
+	public void setNumberOfPositions(int numberOfPositions) {
+		this.numberOfPositions = numberOfPositions;
+	}
+
 	@Override
 	public String toString() {
-		return "OtherBook [name=" + name + ", pages=" + pages + "]";
+		return "OtherBook [name=" + name + ", pages=" + pages + ", numberOfPositions=" + numberOfPositions + "]";
 	}
 
 }
