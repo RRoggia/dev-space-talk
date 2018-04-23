@@ -10,10 +10,10 @@ public class Book {
 		this.pages = pages;
 	}
 
-	public Book(String name, int totalPosition) {
+	/*public Book(String name, int totalPosition) {
 		this.name = name;
 		this.totalPosition = totalPosition;
-	}
+	}*/
 
 	public String getName() {
 		return name;

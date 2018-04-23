@@ -1,24 +1,38 @@
 package com.sap.effective.objectsmanagement;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class OtherBook {
 	private String name;
 	private int pages;
 	private int numberOfPositions;
+	private static Map<String, OtherBook> books = new HashMap<>();
 
-	private OtherBook() {
+	private OtherBook(String name) {
+		this.name = name;
 	}
 
 	public static OtherBook createBook(String name, int pages) {
-		OtherBook otherBook = new OtherBook();
-		otherBook.setName(name);
+
+		if (books.containsKey(name))
+			return books.get(name);
+
+		OtherBook otherBook = new OtherBook(name);
 		otherBook.setPages(pages);
+
+		books.put(name, otherBook);
 		return otherBook;
 	}
 
 	public static OtherBook createDigitalBook(String name, int numberOfPositions) {
-		OtherBook otherBook = new OtherBook();
-		otherBook.setName(name);
+		if (books.containsKey(name))
+			return books.get(name);
+
+		OtherBook otherBook = new OtherBook(name);
 		otherBook.setNumberOfPositions(numberOfPositions);
+
+		books.put(name, otherBook);
 		return otherBook;
 	}
 
