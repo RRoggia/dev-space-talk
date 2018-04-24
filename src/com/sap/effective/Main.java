@@ -19,6 +19,9 @@ public class Main {
 		System.out.print("is digitalBook the same as sameDigitalBook?");
 		System.out.println(sameDigitalBook == digitalBook);
 
+		System.out.println(book2.getName());
+		System.out.println(OtherBook.createBook("A Child Book", 200).getName());
+
 	}
 
 }

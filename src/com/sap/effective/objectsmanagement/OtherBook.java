@@ -9,7 +9,7 @@ public class OtherBook {
 	private int numberOfPositions;
 	private static Map<String, OtherBook> books = new HashMap<>();
 
-	private OtherBook(String name) {
+	protected OtherBook(String name) {
 		this.name = name;
 	}
 
@@ -18,7 +18,8 @@ public class OtherBook {
 		if (books.containsKey(name))
 			return books.get(name);
 
-		OtherBook otherBook = new OtherBook(name);
+		OtherBook otherBook = name.toLowerCase().contains("child") ? new ChildBook(name) : new OtherBook(name);
+
 		otherBook.setPages(pages);
 
 		books.put(name, otherBook);
