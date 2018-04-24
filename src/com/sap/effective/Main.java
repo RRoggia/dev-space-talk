@@ -1,5 +1,7 @@
 package com.sap.effective;
 
+import java.util.EnumSet;
+
 import com.sap.effective.objectsmanagement.Book;
 import com.sap.effective.objectsmanagement.OtherBook;
 
@@ -21,6 +23,8 @@ public class Main {
 
 		System.out.println(book2.getName());
 		System.out.println(OtherBook.createBook("A Child Book", 200).getName());
+
+		EnumSet.noneOf(null);
 
 	}
 
