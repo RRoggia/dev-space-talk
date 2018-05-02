@@ -8,6 +8,7 @@ public class AnonymousClass {
 		this.information = information;
 	}
 
+	@FunctionalInterface
 	public interface JustDoIt {
 		String doSomething(String information);
 	}
