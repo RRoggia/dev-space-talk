@@ -16,4 +16,8 @@ public class AnonymousClass {
 		return doIt.doSomething(this.information);
 	}
 
+	public static String processInformation(String information) {
+		return "Method reference and " + information;
+	}
+
 }

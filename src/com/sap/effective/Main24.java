@@ -28,6 +28,8 @@ public class Main24 {
 
 		System.out.println(new AnonymousClass("Instance A")
 				.processInformation((information) -> "Lambda function and " + information));
+
+		System.out.println(new AnonymousClass("Instance A").processInformation(AnonymousClass::processInformation));
 	}
 
 }
